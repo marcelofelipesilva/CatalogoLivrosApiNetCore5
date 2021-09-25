@@ -22,7 +22,6 @@
       <Folder Include="Configurations" />
       <Folder Include="Controllers" />
       <Folder Include="Infra" />
-      <Folder Include="Models" />
     </ItemGroup>
 
 </Project>
