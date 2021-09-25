@@ -8,6 +8,6 @@ namespace CatalogoLivrosApi.Business.IRepositories
         void Adicionar(Usuario usuario);
         void Commit();
 
-        List<Usuario> obterlivros(int UsuarioID);
+        List<Usuario> obterUsuarios(int UsuarioID);
     }
 }
