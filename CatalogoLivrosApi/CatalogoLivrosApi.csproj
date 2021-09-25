@@ -19,7 +19,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Business" />
+      <Folder Include="Business\IRepositories" />
       <Folder Include="Configurations" />
       <Folder Include="Controllers" />
       <Folder Include="Infra" />
