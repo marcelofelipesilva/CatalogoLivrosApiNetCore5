@@ -2,6 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using CatalogoLivrosApi.Business.IRepositories;
+using CatalogoLivrosApi.Infra;
+using CatalogoLivrosApi.Infra.Data.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -27,6 +30,11 @@ namespace CatalogoLivrosApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
+            services.AddDbContext<CatalogoLivrosDbContext>();
+            services.AddScoped<ILivroRepository, LivroRepository>();
+            services.AddScoped<IUsuarioRepository, UsuarioRepository>();
+            
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo {Title = "CatalogoLivrosApi", Version = "v1"});
